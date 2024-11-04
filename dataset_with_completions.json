@@ -1,0 +1,282 @@
+[
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n",
+        "middle": "gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)",
+        "suffix": "        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n\treturn gray\n\n    def normalize(self):\n        self.image = self.image / 255.0\n        self."
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\n",
+        "middle": "processor = ImageProcessor(\"example.jpg\")",
+        "suffix": "gray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "# image = ImageProcessor(\"images/1.jpg\")\n# image.convert_to_grayscale()\n# image.apply_gaussian_blur()\n# image.resize_image(5, 5)\n\n# Ex"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\n",
+        "middle": "blurred_image = processor.apply_gaussian_blur()",
+        "suffix": "resized_image = processor.resize_image(100, 100)",
+        "generated_middle": "gray_image = processor.apply_gaussian_blur()\ngray_image = processor.resize_image(640, 480)\ngray_image = processor.convert_to_grayscale()\n\ncv2"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n",
+        "middle": "raise ValueError(\"Image not found.\")",
+        "suffix": "\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "#            raise IOError(\"Could not read the image\")\n            return\n        self.image = cv2.resize(self.image, (0, 0), fx=0.5, fy=0.5)\n\n    def get_image"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n",
+        "middle": "def convert_to_grayscale(self):",
+        "suffix": "        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "if __name__ == '__main__':\n    # load image\n    image_path = \"data/images/cat.jpg\"\n    processor = ImageProcessor(image_path)\n    image = processor.image\n    # show image\n    cv2"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n",
+        "middle": "def apply_gaussian_blur(self, kernel_size=(5, 5)):",
+        "suffix": "        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "class ImageProcessor_OneCrop:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\n",
+        "middle": "gray_image = processor.convert_to_grayscale()",
+        "suffix": "blurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "gray_image = processor.convert_to_grayscale()\ngray_image = processor.apply_gaussian_blur()\ngray_image = processor.resize_image(100, 100)\ncv2."
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n",
+        "middle": "blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)",
+        "suffix": "        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "#        gaussian_blur = cv2.GaussianBlur(gray_image, kernel_size, 0)\n        gaussian_blur = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return gaussian_blur"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n",
+        "middle": "if self.image is None:",
+        "suffix": "            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "if __name__ == '__main__':\n    image_processor = ImageProcessor(r'D:\\data\\Data\\ImageProcessing\\image.jpg')\n    image_processor.process()"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n",
+        "middle": "# Exemple d'utilisation",
+        "suffix": "processor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "def load_image(image_path):\n    image = ImageProcessor(image_path)\n    return image.convert_to_grayscale()"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\n",
+        "middle": "class ImageProcessor:",
+        "suffix": "    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "def resize(image, width, height):\n    \"\"\"Resize the image to the desired width and height.\n    \"\"\"\n    h, w = image.shape[:2]\n    if w < height:\n        image = image[0:height,"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n",
+        "middle": "return gray_image",
+        "suffix": "\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "#        self.image = cv2.GaussianBlur(self.image, (5,5), 0)\n        self.image = cv2.GaussianBlur(self.image, (5,5), 0)\n\n    def convert"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n",
+        "middle": "resized_image = cv2.resize(self.image, (width, height))",
+        "suffix": "        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "#        self.image = cv2.resize(self.image, (width, height))\n        return self.image\n\n    def preprocess_image(self, image):\n        return cv2.resize(image, (width, height))"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n",
+        "middle": "def __init__(self, image_path):",
+        "suffix": "        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "def __init__(self, image_file_path, image_height, image_width, image_channels, image_mean):\n\t\tself.image_file_path = image_file_path\n\t\tself.image_"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n",
+        "middle": "def resize_image(self, width, height):",
+        "suffix": "        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": ""
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n",
+        "middle": "return blurred_image",
+        "suffix": "\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": ""
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n        self.image = cv2.imread(image_path)\n        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n",
+        "middle": "return resized_image",
+        "suffix": "\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": ""
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/image_processor.py",
+        "prefix": "import cv2\n\nclass ImageProcessor:\n    def __init__(self, image_path):\n",
+        "middle": "self.image = cv2.imread(image_path)",
+        "suffix": "        if self.image is None:\n            raise ValueError(\"Image not found.\")\n\n    def convert_to_grayscale(self):\n        gray_image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)\n        return gray_image\n\n    def apply_gaussian_blur(self, kernel_size=(5, 5)):\n        blurred_image = cv2.GaussianBlur(self.image, kernel_size, 0)\n        return blurred_image\n\n    def resize_image(self, width, height):\n        resized_image = cv2.resize(self.image, (width, height))\n        return resized_image\n\n# Exemple d'utilisation\nprocessor = ImageProcessor(\"example.jpg\")\ngray_image = processor.convert_to_grayscale()\nblurred_image = processor.apply_gaussian_blur()\nresized_image = processor.resize_image(100, 100)",
+        "generated_middle": "self.image_path = image_path\n\tself.image = cv2.imread(self.image_path, cv2.IMREAD_GRAYSCALE)\n\n\t# Find the dimensions of the image\n\t(rows,"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n",
+        "middle": "return filtered_tokens",
+        "suffix": "\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "#    def remove_punctuation(self):\n#        punctuation = '!\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~'\n#        filtered_tokens = [word for word"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n",
+        "middle": "word_freq = Counter(self.tokens)",
+        "suffix": "        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "frequency = Counter(self.remove_stopwords())\n\treturn frequency\n\n    def get_word_frequency_by_freq(self, frequency):\n\tfrequency_by_freq = {}\n\tfor word, freq in frequency."
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n",
+        "middle": "def __init__(self, text):",
+        "suffix": "        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "def __init__(self):\n\t\tself.stop_words = set(stopwords.words('english'))\n\t\tself.stop_words.add('the')\n\n\tdef analyse(self, text):\n\t\ttext ="
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\n",
+        "middle": "print(analyzer.get_word_frequency())",
+        "suffix": "print(analyzer.get_most_common_words(3))",
+        "generated_middle": "print(analyzer.get_most_common_words())\nprint(analyzer.get_word_frequency())\n\n# Exemple d'utilisation\ntext = \"Nltk is a tool to learn, data science and machine learning.\""
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\n",
+        "middle": "from collections import Counter",
+        "suffix": "\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "from nltk.stem.porter import PorterStemmer\nfrom nltk.stem.snowball import SnowballStemmer\nfrom nltk.stem.lancaster import LancasterStemmer\nfrom nltk.stem.snowball import Snow"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\n",
+        "middle": "text = \"Natural Language Processing is a fascinating field of AI.\"",
+        "suffix": "analyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "# text = 'I am a string'\n# analyzer = TextAnalyzer(text)\n# analyzer.remove_stopwords()\n# analyzer.get_most_common_words(5)\n# print(analyzer.get_word"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n",
+        "middle": "def remove_stopwords(self):",
+        "suffix": "        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "def get_word_freq(word):\n    return Counter(word_tokenize(word))\n\n\ndef get_words(text):\n    return [word for word in text.split()]\n\n\ndef get_words_freq(text"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n",
+        "middle": "def get_word_frequency(self):",
+        "suffix": "        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "class WordsAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.words = self.remove_stopwords()\n\n    def get_word_frequencies(self):\n        words_freq = Counter"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\n",
+        "middle": "nltk.download('punkt')",
+        "suffix": "nltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "def get_data(filename):\n    \"\"\"\n    Extracts the data from a text file and returns it as a list of lists\n    \"\"\"\n    with open(filename) as file:\n        data = file.read().splitlines()\n\n    return"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\n",
+        "middle": "from nltk.tokenize import word_tokenize",
+        "suffix": "from collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "from nltk.stem.porter import PorterStemmer\nfrom nltk.tokenize import word_tokenize\n\ndef remove_stopwords(text):\n    \"\"\"\n    Removes stopwords from a string.\n    :param text:\n    :return:"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n",
+        "middle": "self.text = text",
+        "suffix": "        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "self.text = text\n\n    def analyze(self):\n\tpass\n\n\ndef analyze_text(text):\n    analyzer = TextAnalyzer(text)\n    analyzer.analyze()\n    return analyzer.text\n\n\ndef analyze_words(text"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n",
+        "middle": "self.tokens = word_tokenize(self.text.lower())",
+        "suffix": "\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "def clean_text(text):\n    text = text.lower()\n    text = text.replace(' ', ' ')\n    text = text.replace('\\n', ' ')\n    text = text.replace('\\r', ' ')\n    text ="
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n",
+        "middle": "# Exemple d'utilisation",
+        "suffix": "text = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "class NltkAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words ="
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\n",
+        "middle": "class TextAnalyzer:",
+        "suffix": "    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "def get_word_count(word):\n    return Counter(word.split())\n\n\ndef get_word_list(word):\n    return word_tokenize(word)\n\n\ndef get_word_frequency(word):\n    return"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\n",
+        "middle": "print(analyzer.remove_stopwords())",
+        "suffix": "print(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "print(analyzer.get_most_common_words())\n\n# Exemple d'utilisation\ntext = \"I'm a genuine.\"\nanalyzer = TextAnalyzer(text)\n\nprint(analyzer.get_most"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n",
+        "middle": "return word_freq",
+        "suffix": "\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "#         word_freq = Counter(self.remove_stopwords())\n#         word_freq = Counter(self.get_word_frequency())\n        return word_freq\n\n    def get_word_freq_count(self):"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\n",
+        "middle": "nltk.download('stopwords')",
+        "suffix": "\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "nltk.download('averaged_perceptron_tagger')\nnltk.download('wordnet')\nnltk.download('stopwords')\n\ndef remove_punct(text):\n    return re.sub("
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n",
+        "middle": "word_freq = Counter(self.tokens)",
+        "suffix": "        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "most_common_words = []\n\tfor word in self.tokens:\n\t    if word not in self.tokens and len(word) > n:\n\t        most_common_words.append(word)\n\treturn most_common"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\n",
+        "middle": "from nltk.corpus import stopwords",
+        "suffix": "from nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "import numpy as np\nfrom nltk.stem import WordNetLemmatizer\nfrom nltk.corpus import stopwords\nfrom sklearn.feature_extraction.text import CountVectorizer\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.metrics import"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n",
+        "middle": "return word_freq.most_common(n)",
+        "suffix": "\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "#        word_freq = Counter(self.remove_stopwords())\n        word_freq = word_freq.most_common(n)\n        return word_freq\n\n    def get_frequency(self):\n        word_freq = Counter("
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n        filtered_tokens = [word for word in self.tokens if word not in stop_words]\n        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\n",
+        "middle": "analyzer = TextAnalyzer(text)",
+        "suffix": "print(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "text_analyzer = TextAnalyzer(text)\nprint(text_analyzer.get_most_common_words(n=5))\n\n# Exemple d'utilisation\ntext = \"It is a fascinating field of"
+    },
+    {
+        "file_path": "/Users/alhozsofiane/dossier_jetbrain/text_analyzer.py",
+        "prefix": "import nltk\nfrom nltk.corpus import stopwords\nfrom nltk.tokenize import word_tokenize\nfrom collections import Counter\n\nnltk.download('punkt')\nnltk.download('stopwords')\n\nclass TextAnalyzer:\n    def __init__(self, text):\n        self.text = text\n        self.tokens = word_tokenize(self.text.lower())\n\n    def remove_stopwords(self):\n        stop_words = set(stopwords.words('english'))\n",
+        "middle": "filtered_tokens = [word for word in self.tokens if word not in stop_words]",
+        "suffix": "        return filtered_tokens\n\n    def get_word_frequency(self):\n        word_freq = Counter(self.tokens)\n        return word_freq\n\n    def get_most_common_words(self, n=5):\n        word_freq = Counter(self.tokens)\n        return word_freq.most_common(n)\n\n# Exemple d'utilisation\ntext = \"Natural Language Processing is a fascinating field of AI.\"\nanalyzer = TextAnalyzer(text)\nprint(analyzer.remove_stopwords())\nprint(analyzer.get_word_frequency())\nprint(analyzer.get_most_common_words(3))",
+        "generated_middle": "#         stop_words = set(stopwords.words('english'))\n#         stop_words = set(stopwords.words('english'))\n        self.tokens = [w for w in self.tokens if w not in stop_"
+    }
+]
